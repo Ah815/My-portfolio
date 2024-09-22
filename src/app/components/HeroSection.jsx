@@ -25,7 +25,6 @@ const HeroSection = () => {
                 "Ahmed",
                 150,
                 "Web Developer",
-               
               ]}
               wrapper="span"
               speed={10}
@@ -33,11 +32,14 @@ const HeroSection = () => {
             />
           </h1>
           <div>
+            {/* WhatsApp Messaging Button */}
             <Link
-              href="/#contact"
+              href="https://wa.me/+923222972285?text=Hello%20Ahmed,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." // Replace with your phone number
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 bg-gray-900 hover:bg-slate-800  text-white"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Hire Me
+              Message Me on WhatsApp
             </Link>
             <Link
               href="/"
