@@ -24,18 +24,16 @@ const navLinks = [
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   // Function to control navbar visibility on scroll
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      // Scrolling down - hide the navbar
-      setShowNavbar(false);
-    } else {
-      // Scrolling up - show the navbar
+    if (window.scrollY === 0) {
+      // User is at the top - show the navbar
       setShowNavbar(true);
+    } else {
+      // User is scrolling down or up - hide the navbar
+      setShowNavbar(false);
     }
-    setLastScrollY(window.scrollY);
   };
 
   useEffect(() => {
@@ -43,7 +41,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <nav
