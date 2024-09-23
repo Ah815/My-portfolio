@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "Ecommerces Food Application",
-    description: "Project 1 description",
+    description: "Crave Point is a responsive food-focused e-commerce website built with a ReactJS frontend and Firebase databae. It includes essential features like user authentication (Login), a dynamic Cart, and a fully integrated ordering system. Access to the Cart and ordering functions is restricted to authenticated users, ensuring both security and a personalized shopping experience.",
     image: "/images/ecommerceimg.jpg",
     tag: ["All", "ReactJs"],
     gitUrl: "https://github.com/Ah815/web_engineering_project",
@@ -17,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Marketing Website",
-    description: "Project 2 description",
+    description: "YVOG is a responsive marketing website built with ReactJS and styled using Tailwind CSS. The platform allows users to easily book a consultant directly from the site, offering expert guidance on scaling their own platforms through targeted marketing strategies such as Social Media Marketing(SSM), Pay Per Click Advertising (PPC), Search Engine Optimization (SEO), and more.",
     image: "/images/marketingimg.jpg",
     tag: ["All", "ReactJs"],
     gitUrl: "https://github.com/Ah815/Positivus-Digital-Marketing",
@@ -26,7 +26,7 @@ const projectsData = [
   {
     id: 3,
     title: "Blog Application",
-    description: "Project 3 description",
+    description: "MetaBolg is a responsive blog platform designed for reading and sharing content, built with a Next.js frontend and styled using Tailwind CSS. The backend is powered by Next.js, Prisma, and MongoDB as the database. It includes a secure login feature implemented with NextAuth, allowing users to contribute their own blogs under categories like Sports, Technology, Travel, and Business.",
     image: "/images/blogimg.jpg",
     tag: ["All", "NextJs"],
     gitUrl: "https://github.com/Ah815/Blog_App",

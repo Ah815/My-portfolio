@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -23,24 +23,46 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  // Function to control navbar visibility on scroll
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      // Scrolling down - hide the navbar
+      setShowNavbar(false);
+    } else {
+      // Scrolling up - show the navbar
+      setShowNavbar(true);
+    }
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, [lastScrollY]);
 
   return (
-    <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav
+      className={`fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-           
-        {/* Add the logo as an image */}
-        <Image
-          src="/images/PortfolioLog.jpg"
-          alt="Logo"
-          width={100}  // Specify width
-          height={40}  // Specify height
-        />
-        
-      
+          {/* Add the logo as an image */}
+          <Image
+            src="/images/PortfolioLog.jpg"
+            alt="Logo"
+            width={100} // Specify width
+            height={40} // Specify height
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
