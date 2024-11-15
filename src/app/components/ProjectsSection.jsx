@@ -32,15 +32,15 @@ const projectsData = [
     gitUrl: "https://github.com/Ah815/Blog_App",
     previewUrl: "https://blog-app-pearl-kappa.vercel.app/",
   },
-  // {
-  //   id: 4,
-  //   title: "Food Ordering Application",
-  //   description: "Project 4 description",
-  //   image: "/images/projects/4.png",
-  //   tag: ["All", "Mobile"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 4,
+    title: "Car Rental App",
+    description: "Project 4 description",
+    image: "/images/carrental.jpeg",
+    tag: ["All", "Mobile App"],
+    gitUrl: "https://github.com/Ah815/CarRentalAppFrontend",
+    previewUrl: "https://drive.google.com/file/d/1jZu0xHkSHkjojL152m0AAfKa4lE3OdEL/view?usp=sharing",
+  },
   // {
   //   id: 5,
   //   title: "React Firebase Template",
@@ -99,6 +99,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="NextJs"
           isSelected={tag === "NextJs"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Mobile App"
+          isSelected={tag === "Mobile App"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

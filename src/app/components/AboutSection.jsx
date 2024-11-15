@@ -5,16 +5,50 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Languages",
+    id: "languages",
     content: (
       <ul className="list-disc pl-2">
         <li>JavaScript</li>
-        <li>ReactJs</li>
-        <li>Nextjs</li>
-        <li>Tailwind</li>
-        <li>Firebase</li>
+        <li>Python</li>
+        <li>Java</li>
+      </ul>
+    ),
+  },
+ 
+  {
+    title: "Frontend",
+    id: "frontend",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>ReactJS</li>
+        <li>Next.js</li>
+        <li>React Native</li>
+        <li>CSS</li>
+        <li>Tailwind CSS</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Backend",
+    id: "backend",
+    content: (
+      <ul className="list-disc pl-2">
+         <li>Node</li>
+         <li>Express</li> 
         <li>MongoDB</li>
+        <li>Firebase</li> 
+      </ul>
+    ),
+  },
+  {
+    title: "Library",
+    id: "library",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Material UI</li>
+        <li>Ant Desing</li>
+        <li>Shadcn UI</li>
       </ul>
     ),
   },
@@ -25,7 +59,7 @@ const TAB_DATA = [
       <ul className="list-disc pl-2">
         <li>
           Bachelors in Software Engineering;
-          Sir Syed University of Engineering and Technology, Karachi Pakistan
+          Sir Syed University of Engineering and Technology, Karachi, Pakistan
         </li>
       </ul>
     ),
@@ -35,15 +69,15 @@ const TAB_DATA = [
     id: "courses",
     content: (
       <ul className="list-disc pl-2">
-        <li>Mern Stack</li>
-        <li>AWS Cloud Practitioner</li>
+        <li>MERN Stack</li>
+        <li>React Native</li>
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("languages"); // Changed default tab to "languages"
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -63,20 +97,43 @@ const AboutSection = () => {
         />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a mern stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, ReactJS, NextJs, Tailwind, Firebase, MongoDB,
-            HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          <p className="text-base lg:text-md">
+            I'm a Full Stack Software Engineer with a focus on creating
+            responsive, interactive, and scalable web applications. With
+            expertise in JavaScript, Python, and Java, I am skilled in both
+            frontend and backend development. My frontend stack includes
+            ReactJS, Next.js, React Native, Tailwind CSS, Material UI, Ant
+            Design, and Shadcn UI. On the backend, I work with Node.js,
+            Express.js, Next.js, MongoDB, and Firebase to deliver robust
+            solutions. Proficient in Git for version control, I'm a fast learner
+            with a passion for technology and problem-solving. I thrive in
+            collaborative environments and am excited to contribute to projects
+            that push the boundaries of web development.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start mt-8 text-lg">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("languages")}
+              active={tab === "languages"}
             >
-              Skills
+              Languages
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("frontend")}
+              active={tab === "frontend"}
+            >
+              Frontend
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("backend")}
+              active={tab === "backend"}
+            >
+              Backend
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("library")}
+              active={tab === "library"}
+            >
+              Libraries
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("education")}
@@ -85,14 +142,14 @@ const AboutSection = () => {
               Education
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("courses")} // Fixed the tab id to match "courses"
-              active={tab === "courses"} // Ensure it corresponds to the correct id
+              selectTab={() => handleTabChange("courses")}
+              active={tab === "courses"}
             >
               Courses
             </TabButton>
           </div>
           <div className="mt-8">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {TAB_DATA.find((t) => t.id === tab)?.content}
           </div>
         </div>
       </div>

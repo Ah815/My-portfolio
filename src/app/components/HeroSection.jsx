@@ -24,7 +24,7 @@ const HeroSection = () => {
               sequence={[
                 "Ahmed",
                 150,
-                "Web Developer",
+                "Fullstack Developer",
               ]}
               wrapper="span"
               speed={10}
@@ -42,7 +42,7 @@ const HeroSection = () => {
               Message Me on WhatsApp
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1n5zq8tbj444zThZNOnmIt_wnz6CgSOLV/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1n5zq8tbj444zThZNOnmIt_wnz6CgSOLV/view?usp=sharing"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-gray-900 hover:bg-slate-800 rounded-full px-5 py-2">
