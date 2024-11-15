@@ -15,7 +15,6 @@ const TAB_DATA = [
       </ul>
     ),
   },
- 
   {
     title: "Frontend",
     id: "frontend",
@@ -34,10 +33,10 @@ const TAB_DATA = [
     id: "backend",
     content: (
       <ul className="list-disc pl-2">
-         <li>Node</li>
-         <li>Express</li> 
+        <li>Node</li>
+        <li>Express</li>
         <li>MongoDB</li>
-        <li>Firebase</li> 
+        <li>Firebase</li>
       </ul>
     ),
   },
@@ -47,7 +46,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Material UI</li>
-        <li>Ant Desing</li>
+        <li>Ant Design</li>
         <li>Shadcn UI</li>
       </ul>
     ),
@@ -98,14 +97,14 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-md">
-            I'm a Full Stack Software Engineer with a focus on creating
+            I&apos;m a Full Stack Software Engineer with a focus on creating
             responsive, interactive, and scalable web applications. With
             expertise in JavaScript, Python, and Java, I am skilled in both
             frontend and backend development. My frontend stack includes
             ReactJS, Next.js, React Native, Tailwind CSS, Material UI, Ant
             Design, and Shadcn UI. On the backend, I work with Node.js,
             Express.js, Next.js, MongoDB, and Firebase to deliver robust
-            solutions. Proficient in Git for version control, I'm a fast learner
+            solutions. Proficient in Git for version control, I&apos;m a fast learner
             with a passion for technology and problem-solving. I thrive in
             collaborative environments and am excited to contribute to projects
             that push the boundaries of web development.
