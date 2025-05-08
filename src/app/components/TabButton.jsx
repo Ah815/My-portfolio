@@ -1,26 +1,28 @@
-import React from "react";
-import { motion } from "framer-motion";
-
-const variants = {
-  default: { width: 0 },
-  active: { width: "calc(100% - 0.75rem)" },
-};
+"use client"
+import { motion } from "framer-motion"
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const buttonClasses = active
+    ? "text-white border-b-2 border-primary-500 font-semibold"
+    : "text-gray-400 hover:text-gray-300"
 
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
-        {children}
-      </p>
-      <motion.div
-        animate={active ? "active" : "default"}
-        variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
-      ></motion.div>
-    </button>
-  );
-};
+    <motion.button
+      whileHover={{ scale: active ? 1 : 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={selectTab}
+      className={`mr-1 sm:mr-2 md:mr-3 font-medium py-1 px-0.5 xs:px-1 sm:px-2 ${buttonClasses} transition-all duration-300 relative text-xs xs:text-sm sm:text-base`}
+    >
+      {children}
+      {active && (
+        <motion.div
+          className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-gradient-to-r from-primary-500 to-secondary-500"
+          layoutId="activeTab"
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+        />
+      )}
+    </motion.button>
+  )
+}
 
-export default TabButton;
+export default TabButton
