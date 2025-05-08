@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-gray-300 text-base sm:text-lg mb-6 sm:mb-8 max-w-xl mx-auto md:mx-0">
-              I build responsive, user-friendly web applications with modern technologies. Let's turn your ideas into
+              I build responsive, user-friendly web applications with modern technologies. Lets turn your ideas into
               reality.
             </p>
 
