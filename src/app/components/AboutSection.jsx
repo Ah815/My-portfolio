@@ -99,33 +99,6 @@ const TAB_DATA = [
       </div>
     ),
   },
-  // {
-  //   title: "Animations",
-  //   id: "animations",
-  //   icon: <Sparkles className="w-4 h-4 xs:w-5 xs:h-5 mr-1 xs:mr-2" />,
-  //   content: (
-  //     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 xs:gap-4">
-  //       {[
-          
-  //       ].map((skill, index) => (
-  //         <div key={index} className="mb-3 xs:mb-4">
-  //           <div className="flex justify-between mb-1">
-  //             <span className="font-medium text-xs xs:text-sm sm:text-base">{skill.name}</span>
-  //             <span className="text-xs text-gray-400">{skill.level}%</span>
-  //           </div>
-  //           <div className="w-full bg-gray-700 rounded-full h-1.5 xs:h-2">
-  //             <motion.div
-  //               initial={{ width: 0 }}
-  //               animate={{ width: `${skill.level}%` }}
-  //               transition={{ duration: 1, delay: 0.2 * index }}
-  //               className="h-1.5 xs:h-2 rounded-full bg-gradient-to-r from-primary-500 to-secondary-500"
-  //             />
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </div>
-  //   ),
-  // },
   {
     title: "Education",
     id: "education",
